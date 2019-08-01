@@ -73,4 +73,20 @@
       }
     }
   }
+
+  &--video {
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 25px;
+      height: 25px;
+      margin-right: 15px;
+      background-position: -149px -1px;
+      background-image: url(../img/icons/icons-spritesheet.png);
+      background-repeat: no-repeat;
+      background-size: 188px 104px;
+    }
+  }
 }

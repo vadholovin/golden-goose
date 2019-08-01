@@ -1,0 +1,39 @@
+/*------------------------------------*\
+  #BANNER
+\*------------------------------------*/
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-height: 916px;
+  min-height: 570px;
+  // padding-top: 300px;
+  // padding-bottom: 250px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &__title.title {
+    margin-bottom: 58px;
+    color: $brand;
+
+    &:after {
+      border-color: $brand;
+    }
+  }
+
+  &__desc {
+    max-width: 520px;
+    margin: 0 auto 65px auto;
+    color: #fff;
+  }
+
+  .button {
+    width: 305px;
+  }
+}
