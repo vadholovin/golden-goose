@@ -7,16 +7,21 @@ html {
 }
 
 
-body {
+// body {
+//   font-family: $main-font;
+//   font-weight: normal;
+//   font-size: rem(15);
+//   line-height: 1.6;
+//   letter-spacing: 0.025em;
+//   color: $grey-l;
+// }
+
+body, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
   font-family: $main-font;
   font-weight: normal;
   font-size: rem(15);
   line-height: 1.6;
   letter-spacing: 0.025em;
   color: $grey-l;
-}
-
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-  font-family: $main-font;
 }

@@ -1,8 +1,8 @@
 section.about
   .container
-    .pure-g
+    .about__grid.pure-g
       .pure-u-1.pure-u-lg-1-2
-        h2.title.title--dash.title--dash-left о нас
+        h2.about__title.title.title--dash.title--dash-left о нас
         .about__desc.desc
           p
             | Гостевой дом «Золотой Гусь» расположен в городе Кисловодск и построен в немецком стиле «баварского подворья» и сдан в эксплуатацию в 2012 г. Он расположен в тихой парковой зоне в 1,5 километрах от центра города и  железнодорожного вокзала Кисловодска. Номерной фонд отеля включает в себя 7 комфортабельных номеров различных категорий, оснащенных душем и туалетом. На территории гостевого дома расположен сад и площадка для барбекю. 
@@ -28,7 +28,7 @@ section.about
         span.about-feature__title завтрак
         span.about-feature__notes входит в стоимость
 
-    .pure-g.about-booking
+    .about__booking.about-booking.pure-g
       .pure-u-1.pure-u-lg-7-12
         img(src="img/content/about/img-2.jpg", alt="")
 
@@ -40,5 +40,8 @@ section.about
             | Регистрация заезда – с 14:00
             br
             | Регистрация отъезда – до 12:00
-          button.button.button--arrow забронировать номер
+          button.button.button--arrow
+            | забронировать номер
+            svg.arrow
+              use(xlink:href="img/icons/arrow-r-golden.svg#arrow")
 

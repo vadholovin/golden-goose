@@ -1,0 +1,79 @@
+/*------------------------------------*\
+  #ABOUT
+\*------------------------------------*/
+
+.about {
+  padding-top: 60px;
+  padding-bottom: 140px;
+
+  &__grid {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    padding-top: 24px;
+  }
+}
+
+.about__features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+
+.about-feature {
+  margin: 0 40px 30px 40px;
+  text-align: center;
+
+  .icon {
+    display: inline-flex;
+    align-items: flex-end;
+    height: 59px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &__notes {
+    display: block;
+    font-size: rem(16);
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: $grey-l;
+    opacity: 0.5;
+  }
+}
+
+.about-booking {
+
+  &__content {
+    padding: 90px 70px 0 64px;
+  }
+
+  &__desc {
+    margin-bottom: 24px;
+  }
+
+  &__schedule {
+    margin-bottom: 60px;
+    font-weight: bold;
+  }
+
+  .button {
+    width: 318px;
+
+    .arrow {
+      margin-left: 8px;
+    }
+  }
+}

@@ -4,19 +4,18 @@
 
 .icon {
   position: relative;
-  background-image: url(../img/icons/icons-spritesheet.png);
-  background-repeat: no-repeat;
-  display: block;
-  background-size: 188px 104px;
+  display: inline-block;
+
+  &::after {
+    background-image: url(../img/icons/icons-spritesheet.png);
+    background-repeat: no-repeat;
+    background-size: 188px 104px;
+  }
 }
 
 .icon-arrow-lg-right::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 34px;
   height: 11px;
   background-position: -1px -1px;
@@ -25,10 +24,6 @@
 .icon-calendar::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
   background-position: -37px -1px;
@@ -37,10 +32,6 @@
 .icon-mouse::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 20px;
   height: 30px;
   background-position: -59px -1px;
@@ -49,22 +40,14 @@
 .icon-parking::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 70px;
   height: 59px;
-  background-position: -1px -11px;
+  background-position: -1px -33px;
 }
 
 .icon-plate::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 66px;
   height: 46px;
   background-position: -81px -1px;
@@ -73,10 +56,6 @@
 .icon-play::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 25px;
   height: 25px;
   background-position: -149px -1px;
@@ -85,10 +64,6 @@
 .icon-tv::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 57px;
   height: 54px;
   background-position: -73px -49px;
@@ -97,10 +72,6 @@
 .icon-wifi::after {
   content: '';
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 55px;
   height: 44px;
   background-position: -132px -49px;

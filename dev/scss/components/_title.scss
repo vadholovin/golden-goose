@@ -1,0 +1,33 @@
+/*------------------------------------*\
+  #TITLE
+\*------------------------------------*/
+
+.title {
+  font-weight: bold;
+  font-size: rem(48);
+  line-height: 1.2;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+
+  &--dash {
+
+    &:after {
+      content: '';
+      display: block;
+      width: 149px;
+      height: 0;
+      border: 1px solid #000;
+    }
+  }
+
+  &--dash-left {
+    display: flex;
+    align-items: center;
+
+    &:after {
+      order: -1;
+      margin-right: 30px;
+    }
+  }
+}
