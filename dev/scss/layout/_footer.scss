@@ -1,3 +1,35 @@
-/*------------------------------------------*/
-/*  FOOTER
-/*------------------------------------------*/
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  padding-top: 16px;
+  padding-bottom: 30px;
+  color: $grey-l;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__module {
+    margin-right: 64px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__address {
+    padding-top: 20px;
+    font-size: rem(14);
+    margin-bottom: 8px;
+  }
+
+  &__rights {
+    font-size: rem(10);
+  }
+}
