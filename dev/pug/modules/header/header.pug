@@ -1,6 +1,14 @@
 header.header
   .container
     nav.header__nav
+      button.hamburger.hamburger--spring(
+        type='button',
+        aria-label='Menu',
+        aria-controls='navigation'
+      )
+        span.hamburger-box
+          span.hamburger-inner
+
       .header__menu.menu.menu--main
         a.menu__link(href="#") главная
         a.menu__link(href="#") номера и цены
@@ -9,9 +17,26 @@ header.header
         a.menu__link(href="#") спецпредложения
         a.menu__link(href="#") контакты
 
-      .header__contacts
+      .header__contacts.header__contacts--main
         | г. Кисловодск,
         br
         | Тел: <a href="tel:+74955316886">+7 (495) 531-68-86</a>
         br
         | доб. 121
+  .mobile-nav
+    .mobile-nav__overlay
+      .mobile-nav__content
+        .mobile-nav__container.container
+          .menu.menu--mobile
+            a.menu__link(href="#") главная
+            a.menu__link(href="#") номера и цены
+            a.menu__link(href="#") бронирование
+            a.menu__link(href="#") услуги
+            a.menu__link(href="#") спецпредложения
+            a.menu__link(href="#") контакты
+          .header__contacts.header__contacts--mobile
+            | г. Кисловодск,
+            br
+            | Тел: <a href="tel:+74955316886">+7 (495) 531-68-86</a>
+            br
+            | доб. 121

@@ -3,5 +3,25 @@
 \*------------------------------------*/
 
 .header {
-  
+  padding-top: 36px;
+  background-color: #000;
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__contacts {
+    font-weight: bold;
+    font-size: rem(15);
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &--main {
+      margin-left: auto;
+      color: $brand;
+      text-align: right;
+    }
+  }
 }
