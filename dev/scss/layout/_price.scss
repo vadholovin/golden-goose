@@ -11,20 +11,23 @@
   }
 
   &__grid {
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: -2vw;
+    margin-right: -2vw;
+    // margin-left: -40px;
+    // margin-right: -40px;
 
     > * {
       margin-bottom: 10px;
-      padding: 0 40px 30px 40px;
-      transition:
-        transform 0.25s,
-        box-shadow 0.25s;
+      padding: 0 2vw 30px 2vw;
+      // padding: 0 40px 30px 40px;
+      // transition:
+      //   transform 0.25s,
+      //   box-shadow 0.25s;
 
-      &:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
-      }
+      // &:hover {
+      //   transform: translateY(-6px);
+      //   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+      // }
     }
   }
 }
