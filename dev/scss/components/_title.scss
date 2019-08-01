@@ -6,11 +6,12 @@
   font-weight: bold;
   font-size: rem(48);
   line-height: 1.2;
+  letter-spacing: 0.07em;
   color: $black;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
 
   &--dash {
+    position: relative;
 
     &:after {
       content: '';
@@ -28,6 +29,17 @@
     &:after {
       order: -1;
       margin-right: 30px;
+    }
+  }
+
+  &--dash-bottom {
+    padding-bottom: 26px;
+    
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

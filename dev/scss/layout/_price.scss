@@ -1,0 +1,88 @@
+/*------------------------------------*\
+  #PRICE
+\*------------------------------------*/
+
+.price {
+  padding-bottom: 85px;
+
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__grid {
+    margin-left: -40px;
+    margin-right: -40px;
+
+    > * {
+      margin-bottom: 10px;
+      padding: 0 40px 30px 40px;
+      transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+.price-item {
+  text-align: center;
+  
+  img {
+    display: block;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 30px;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: 1;
+    letter-spacing: 0.2em;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &__cost {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: rem(36);
+    line-height: 1;
+    letter-spacing: 0.075em;
+    color: $brand;
+
+    &-money {
+      display: block;
+      margin-top: 3px;
+      font-weight: normal;
+      font-size: rem(16);
+      letter-spacing: 0.2em;
+      color: $grey-l;
+      opacity: 0.5;
+    }
+  }
+
+  &__more {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: 1;
+    letter-spacing: 0.2em;
+    color: $black;
+    text-transform: uppercase;
+
+  }
+
+  .button {
+    width: 100%;
+    max-width: 220px;
+  }
+}
