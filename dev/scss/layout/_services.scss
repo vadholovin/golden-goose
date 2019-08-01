@@ -1,0 +1,29 @@
+/*------------------------------------*\
+  #SERVICES
+\*------------------------------------*/
+
+.services {
+  padding-bottom: 115px;
+
+  &__container.container {
+    padding-left: 130px;
+  }
+
+  &__title {
+    margin-top: 60px;
+    margin-bottom: 36px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: rem(16);
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  p {
+    margin-bottom: 26px;
+  }
+}
