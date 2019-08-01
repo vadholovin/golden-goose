@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  #FEEDBACK
+\*------------------------------------*/
+
+.feedback {
+  padding-bottom: 185px;
+
+  &__grid {
+    align-items: stretch;
+
+    [class*=pure-u]:last-child {
+      padding-top: 162px;
+      padding-left: 5.83vw;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 65px;
+  }
+
+  &__form {
+    
+    .button {
+      width: 220px;
+    }
+  }
+}

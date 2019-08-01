@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #FORM CONTROLS
+\*------------------------------------*/
+
+.form-control__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 317px;
+  margin-bottom: 34px;
+
+  &--textarea {
+    max-width: 410px;
+  }
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 12px;
+  padding-left: 26px;
+  font-weight: bold;
+  font-size: rem(14);
+  line-height: 1;
+  letter-spacing: 0.2em;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+	display: block;
+  width: 100%;
+  padding: 18px 16px 18px 26px;
+  border: 1px solid #dddddd;
+  font-size: inherit;
+	line-height: 1.15;
+	color: inherit;
+  background: #fff;
+
+  &:focus {
+    outline: 2px solid $brand;
+    outline-offset: -1px;
+  }
+}
+
+.form-textarea {
+  height: 150px;
+}

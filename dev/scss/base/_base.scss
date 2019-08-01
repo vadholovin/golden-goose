@@ -114,10 +114,36 @@ img {
   border-style: none;
 }
 
-*::-webkit-input-placeholder,
-*:-moz-placeholder,
-*::-moz-placeholder,
-*:-ms-input-placeholder {
-  color: #000;
-  opacity: 1
+/**
+ * Fix placeholder font properties inheritance.
+ */
+::-webkit-input-placeholder {
+  font: inherit;
+  color: $grey-l;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  font: inherit;
+  color: $grey-l;
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder {
+  font: inherit;
+  color: $grey-l;
+  opacity: 0.5;
+}
+
+::placeholder {
+  font: inherit;
+  color: $grey-l;
+  opacity: 0.5;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
 }
