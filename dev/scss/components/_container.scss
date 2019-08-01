@@ -1,0 +1,40 @@
+/*------------------------------------------*/
+/*  #CONTAINER
+/*------------------------------------------*/
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1450px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .container--wider {
+    max-width: 1590px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.container--fluid {
+  width: 100%;
+}

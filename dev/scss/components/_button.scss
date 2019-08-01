@@ -1,0 +1,42 @@
+/*------------------------------------------*/
+/*  BUTTONS
+/*------------------------------------------*/
+.button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: top;
+  user-select: none;
+  border: 2px solid $brand;
+  padding: 16px;
+  font-family: $main-font;
+  font-size: rem(15);
+  line-height: 1.15;
+  font-weight: bold;
+  border-radius: 0;
+  color: $brand;
+  transition:
+    background-color 0.25s ease-in-out,
+    color 0.25s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $brand;
+    color: $black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--light {
+    border-color: #fff;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $black;
+    }
+  }
+}

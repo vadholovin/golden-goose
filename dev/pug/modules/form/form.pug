@@ -1,0 +1,35 @@
+.map-n-form
+  .container
+    .pure-g
+      .pure-u-1.pure-u-1-2
+        .map#map
+
+      .pure-u-1.pure-u-1-2
+        section.feedback
+        p.feedback__title.title
+        form.feedback__form.form
+          label.form-label(for="user-name") Имя
+          .form-input__wrapper
+            input.form-input#user-name(
+              type="text",
+              name="user-name",
+              placeholder="Введите имя"
+            )
+          label.form-label(for="user-email") email
+          .form-input__wrapper
+            input.form-input#user-email(
+              type="text",
+              name="user-email",
+              placeholder="Введите email"
+            )
+          label.form-label(for="user-message") сообщение
+          .form-input__wrapper
+            textarea.form-input#user-message(
+              type="text",
+              name="user-message",
+              rows="1",
+              placeholder="Введите сообщение"
+            )
+          button.button.button--arrow(
+            type="submit"
+          ) отправить
