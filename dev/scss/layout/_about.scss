@@ -4,15 +4,40 @@
 
 .about {
   padding-top: 60px;
-  padding-bottom: 140px;
+  padding-bottom: 70px;
+
+  @media (min-width: 62em) {
+    padding-bottom: 80px;
+  }
+  @media (min-width: 80em) {
+    padding-bottom: 100px;
+  }
+  @media (min-width: 100em) {
+    padding-bottom: 140px;
+  }
 
   &__grid {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+
+    @media (min-width: 62em) {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: 100em) {
+      margin-bottom: 100px;
+    }
   }
 
   &__title {
     margin-bottom: 10px;
-    padding-top: 24px;
+
+    @media (min-width: 62em) {
+      padding-top: 24px;
+    }
+  }
+
+  &__img {
+    text-align: center;
   }
 }
 
@@ -20,9 +45,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 65px;
+  margin-bottom: 35px;
   margin-left: -40px;
   margin-right: -40px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 65px;
+  }
 }
 
 .about-feature {
@@ -59,16 +88,32 @@
 .about-booking {
 
   &__content {
-    padding: 90px 70px 0 64px;
+    padding-top: 40px;
+
+    @media (min-width: 62em) {
+      // padding: 40px 70px 0 64px;
+      padding: 40px 3.6458vw 0 3.333vw;
+    }
+    @media (min-width: 80em) {
+      padding-top: 60px;
+    }
+    @media (min-width: 100em) {
+      padding-top: 90px;
+    }
   }
 
   &__desc {
+    max-width: 300px;
     margin-bottom: 24px;
   }
 
   &__schedule {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     font-weight: bold;
+
+    @media (min-width: 62em) {
+      margin-bottom: 60px;
+    }
   }
 
   .button {

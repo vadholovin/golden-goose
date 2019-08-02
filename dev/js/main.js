@@ -58,3 +58,15 @@ $(document).ready(function () {
     dateFormat : 'dd MM yy',
   });
 });
+
+
+/**
+ * Smooth scroll to anchor
+ */
+(function(){
+
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    offset: 50,
+  });
+
+})();

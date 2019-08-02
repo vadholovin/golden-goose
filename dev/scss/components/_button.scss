@@ -93,5 +93,10 @@
       background-repeat: no-repeat;
       background-size: 188px 104px;
     }
+
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+    }
   }
 }

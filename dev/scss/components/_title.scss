@@ -4,11 +4,27 @@
 
 .title {
   font-weight: bold;
-  font-size: rem(48);
+  font-size: rem(28);
   line-height: 1.2;
   letter-spacing: 0.07em;
   color: $black;
   text-transform: uppercase;
+
+  @media (min-width: 36em) {
+    font-size: rem(36);
+  }
+
+  @media (min-width: 48em) {
+    font-size: rem(40);
+  }
+
+  @media (min-width: 62em) {
+    font-size: rem(44);
+  }
+
+  @media (min-width: 1470px) {
+    font-size: rem(48);
+  }
 
   &--dash {
     position: relative;
