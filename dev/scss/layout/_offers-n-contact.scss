@@ -46,8 +46,10 @@
         display: block;
         position: absolute;
         top: 28%;
-        left: -98px;
-        width: 149px;
+        left: 0;
+        transform: translateX(-66%);
+        // width: 149px;
+        width: 7.76vw;
         height: 0;
         border: 1px solid #000;
       }
