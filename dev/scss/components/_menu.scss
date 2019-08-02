@@ -26,6 +26,14 @@
       white-space: nowrap;
       color: rgba(255, 255, 255, 0.5);
 
+      &:first-child {
+        margin-left: 0;
+
+        @media (min-width: 1400px) {
+          margin-left: 38px;
+        }
+      }
+
       &:hover {
         color: rgba(255, 255, 255, 1);
       }

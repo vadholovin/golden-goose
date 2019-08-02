@@ -15,8 +15,10 @@
 
     &:after {
       content: '';
+      flex: none;
       display: block;
-      width: 149px;
+      // width: 149px;
+      width: 7.76vw;
       height: 0;
       border: 1px solid #000;
     }

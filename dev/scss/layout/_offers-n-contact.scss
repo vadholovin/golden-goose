@@ -1,0 +1,80 @@
+/*------------------------------------*\
+  #OFFERS-N-CONTACT
+\*------------------------------------*/
+
+.offers-n-contact {
+  padding-top: 164px;
+  padding-bottom: 64px;
+}
+
+.offers {
+
+  &__unit {
+    padding-top: 90px;
+  }
+
+  &__title {
+    position: relative;
+    left: -70px;
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+
+  &__desc.desc {
+    position: relative;
+    // padding-left: 115px;
+    padding-left: 5.83vw;
+    padding-right: 7vw;
+  }
+
+  &-img-1 {
+    margin-bottom: auto;
+  }
+
+  &-img-2 {
+
+    @media (min-width: 100em) {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      transform: translateX(-70px);
+      width: 100%;
+      max-width: 427px;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 28%;
+        left: -98px;
+        width: 149px;
+        height: 0;
+        border: 1px solid #000;
+      }
+    }
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.contact {
+
+  &__unit {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 80em) {
+      order: -1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__address {
+    margin-bottom: 24px;
+  }
+}

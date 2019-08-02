@@ -1,6 +1,7 @@
-/*------------------------------------------*/
-/*  BUTTONS
-/*------------------------------------------*/
+/*------------------------------------*\
+  #BUTTON
+\*------------------------------------*/
+
 .button {
   position: relative;
   display: inline-block;
@@ -9,7 +10,7 @@
   vertical-align: top;
   user-select: none;
   border: 2px solid $brand;
-  padding: 16px;
+  padding: 19px 16px;
   font-family: $main-font;
   font-size: rem(14);
   line-height: 1;
@@ -48,6 +49,7 @@
     .arrow {
       width: 34px;
       height: 11px;
+      margin-left: 8px;
       stroke: $brand;
       transition: stroke 0.25s ease-in-out;
     }
@@ -75,6 +77,9 @@
   }
 
   &--video {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    line-height: 1.8;
 
     &::before {
       content: '';

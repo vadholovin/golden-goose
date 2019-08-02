@@ -6,24 +6,17 @@
   padding-bottom: 115px;
 
   &__container.container {
-    padding-left: 130px;
+    // padding-left: 130px;
+
+    @media (min-width: 1280px) {
+      max-width: 1590px;
+      padding-left: 130px;
+      padding-right: 100px;
+    }
   }
 
   &__title {
     margin-top: 60px;
     margin-bottom: 36px;
-  }
-
-  h3 {
-    font-weight: bold;
-    font-size: rem(16);
-    line-height: 1.4;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: $black;
-  }
-
-  p {
-    margin-bottom: 26px;
   }
 }

@@ -1,0 +1,44 @@
+.hero#hero
+  .container-fluid
+    .hero__grid.pure-g
+      .pure-u-1.pure-u-lg-1-2.hero__col-left
+        .hero__box
+          .brand.brand--hero
+            img(src="img/general/logo.png", alt="")
+          button.button.button--light.button--video
+            | смотреть видео
+        
+        .hero__slider.hero-slider
+          .hero-slider__item
+
+        span.icon.icon-mouse.hero__down
+
+      .pure-u-1.pure-u-lg-1-2.hero__col-right(
+        style="background-image: url(img/general/bg/img-1.jpg);"
+      )
+        form.hero__form.hero-form.form(
+          action=""
+        )
+          .form-row
+            label.hero-form__label(for="checkin")
+              | Выезд
+            .form-control__wrapper
+              input.form-input#checkin(
+                type="text",
+                name="checkin",
+                placeholder="19 июня 2019"
+              )
+            label.hero-form__label(for="checkout")
+              | Заезд
+            .form-control__wrapper
+              input.form-input#checkout(
+                type="text",
+                name="checkout",
+                placeholder="19 июня 2019"
+              )
+            button.button.button--arrow(
+              type="submit"
+            ) найти номер
+              svg.arrow
+                use(xlink:href="img/icons/arrow-r-golden.svg#arrow")
+
