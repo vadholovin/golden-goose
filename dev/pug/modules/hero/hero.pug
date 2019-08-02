@@ -1,19 +1,29 @@
 .hero#hero
-  .container-fluid
-    .hero__grid.pure-g
-      .pure-u-1.pure-u-lg-1-2.hero__col-left
+  .container--fluid
+    .hero__grid
+      .hero__col.hero__col--left
         .hero__box
           .brand.brand--hero
             img(src="img/general/logo.png", alt="")
           button.button.button--light.button--video
             | смотреть видео
         
-        .hero__slider.hero-slider
-          .hero-slider__item
+        .hero-slider__wrapper
+          .hero__slider.hero-slider.js-hero-slider
+            .hero-slider__item
+              img(src="img/content/hero/img-1.jpg", alt="")
+            .hero-slider__item
+              img(src="img/content/hero/img-1.jpg", alt="")
+            .hero-slider__item
+              img(src="img/content/hero/img-1.jpg", alt="")
+          .hero-slider__dots
+            .slick-counter 01
 
-        span.icon.icon-mouse.hero__down
+        a.icon.icon-mouse.hero__down(
+          href="#about"
+        )
 
-      .pure-u-1.pure-u-lg-1-2.hero__col-right(
+      .hero__col.hero__col--right.overlay(
         style="background-image: url(img/general/bg/img-1.jpg);"
       )
         form.hero__form.hero-form.form(
@@ -28,6 +38,8 @@
                 name="checkin",
                 placeholder="19 июня 2019"
               )
+              label.icon.icon-calendar(for="checkin")
+          .form-row
             label.hero-form__label(for="checkout")
               | Заезд
             .form-control__wrapper
@@ -36,9 +48,11 @@
                 name="checkout",
                 placeholder="19 июня 2019"
               )
+              label.icon.icon-calendar(for="checkout")
+          .form-row
             button.button.button--arrow(
               type="submit"
             ) найти номер
               svg.arrow
                 use(xlink:href="img/icons/arrow-r-golden.svg#arrow")
-
+  

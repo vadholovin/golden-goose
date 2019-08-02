@@ -7,6 +7,15 @@
   outline: 0;
   text-decoration: none;
 
+  &--hero {
+    width: 28.8vw;
+    margin-bottom: 45px;
+
+    @media (min-width: 100em) {
+      margin-bottom: 70px;
+    }
+  }
+
   &--footer {
     width: 190px;
     height: 71px;

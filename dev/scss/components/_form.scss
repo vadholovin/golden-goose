@@ -2,6 +2,20 @@
   #FORM
 \*------------------------------------*/
 
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .form-control__wrapper {
+    margin-bottom: 0;
+  }
+}
+
 .form-control__wrapper {
   position: relative;
   width: 100%;
@@ -33,7 +47,7 @@
   border: 1px solid #dddddd;
   font-size: inherit;
 	color: inherit;
-  background: #fff;
+  background: transparent;
 
   &:focus {
     outline: 2px solid $brand;

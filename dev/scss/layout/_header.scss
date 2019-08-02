@@ -3,8 +3,11 @@
 \*------------------------------------*/
 
 .header {
+  position: relative;
+  margin-bottom: -100px;
+  height: 100px;
   padding-top: 36px;
-  background-color: #000;
+  // background-color: #000;
 
   &__nav {
     display: flex;
