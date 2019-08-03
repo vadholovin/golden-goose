@@ -3,27 +3,80 @@
 \*------------------------------------*/
 
 .feedback {
-  padding-bottom: 185px;
+  padding-bottom: 60px;
+
+  @media (min-width: 62em) {
+    padding-bottom: 80px;
+  }
+  @media (min-width: 80em) {
+    padding-bottom: 120px;
+  }
+  @media (min-width: 100em) {
+    padding-bottom: 185px;
+  }
 
   &__grid {
     align-items: stretch;
 
     [class*=pure-u]:last-child {
-      padding-top: 162px;
-      padding-left: 5.83vw;
+      order: -1;
+      margin-bottom: 50px;
+
+      @media (min-width: 62em) {
+        order: 0;
+        margin-bottom: 0;
+        padding-top: 60px;
+        padding-left: 5.83vw;
+      }
+      @media (min-width: 80em) {
+        padding-top: 120px;
+      }
+      @media (min-width: 100em) {
+        padding-top: 162px;
+      }
     }
   }
 
   &__map {
-    width: 100%;
-    height: 100%;
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+
+    @media (min-width: 62em) {
+      height: 100%;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__title {
-    margin-bottom: 65px;
+    margin-bottom: 50px;
+
+    @media (min-width: 62em) {
+      margin-bottom: 65px;
+    }
   }
 
   &__form {
+
+    .form-control__wrapper {
+      max-width: 317px;
+      margin-bottom: 24px;
+
+      @media (min-width: 62em) {
+        margin-bottom: 34px;
+      }
+
+      &--textarea {
+        max-width: 410px;
+      }
+    }
     
     .button {
       width: 220px;

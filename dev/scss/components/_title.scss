@@ -61,4 +61,18 @@
       transform: translateX(-50%);
     }
   }
+
+  &--offers {
+    @media (min-width: 62em) {
+      font-size: rem(38);
+    }
+
+    @media (min-width: 80em) {
+      font-size: rem(44);
+    }
+  
+    @media (min-width: 1470px) {
+      font-size: rem(48);
+    }
+  }
 }

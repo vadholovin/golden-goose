@@ -4,11 +4,11 @@
 
 .about {
   padding-top: 60px;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 
-  @media (min-width: 62em) {
-    padding-bottom: 80px;
-  }
+  // @media (min-width: 62em) {
+  //   padding-bottom: 80px;
+  // }
   @media (min-width: 80em) {
     padding-bottom: 100px;
   }
@@ -34,10 +34,6 @@
     @media (min-width: 62em) {
       padding-top: 24px;
     }
-  }
-
-  &__img {
-    text-align: center;
   }
 }
 
