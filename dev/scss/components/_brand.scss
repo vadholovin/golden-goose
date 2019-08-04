@@ -8,9 +8,12 @@
   text-decoration: none;
 
   &--hero {
-    width: 28.8vw;
+    width: 190px;
     margin-bottom: 45px;
 
+    @media (min-width: 48em) {
+      width: 28.8vw;
+    }
     @media (min-width: 100em) {
       margin-bottom: 70px;
     }

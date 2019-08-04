@@ -24,7 +24,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
 $hamburger-hover-use-filter   : false !default;
-$hamburger-hover-filter       : opacity(50%) !default;
+$hamburger-hover-filter       : opacity(75%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 // Types (Remove or comment out what you don’t need)
@@ -118,6 +118,9 @@ $hamburger-types: (
 // }
 
 .hamburger {
+  position: fixed;
+  top: 36px;
+  left: 30px;
   line-height: 1;
   outline: none;
   cursor: pointer;
@@ -125,5 +128,22 @@ $hamburger-types: (
 
   @media (min-width: 1340px) {
     display: none;
+  }
+
+  &--scroll {
+    top: 28px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.9);
+      z-index: -1;
+    }
   }
 }

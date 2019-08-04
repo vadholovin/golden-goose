@@ -15,26 +15,30 @@
 
     &--left {
       position: relative;
-      padding-bottom: 70px;
 
-      @media (min-width: 80em) {
+      @media (min-width: 62em) {
         flex: 1 1 54.5%;
         max-width: 54.5%;
+        padding-bottom: 70px;
       }
     }
 
     &--right {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-end;
-      padding-right: 150px;
-      padding-left: 15px;
-      padding-bottom: 90px;
+      align-items: center;
+      padding: 60px 15px 60px 15px;
 
-      @media (min-width: 80em) {
+      @media (min-width: 62em) {
+        justify-content: flex-end;
+        align-items: flex-end;
         flex: 1 1 45.5%;
         max-width: 45.5%;
+        padding-bottom: 90px;
+      }
+
+      @media (min-width: 80em) {
+        padding-right: 150px;
       }
   
       @media (min-width: 1470px) {
@@ -47,10 +51,19 @@
 
   &__box {
     position: absolute;
-    top: 40%;
-    left: 100%;
+    top: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     z-index: 10;
+
+    @media (min-width: 48em) {
+      left: 50%;
+    }
+
+    @media (min-width: 62em) {
+      top: 40%;
+      left: 100%;
+    }
 
     @media (min-width: 100em) {
       margin-top: 20px;
@@ -58,6 +71,12 @@
 
     .button {
       opacity: 0.5;
+      transform: scale(0.8);
+      transform-origin: left;
+
+      @media (min-width: 48em) {
+        transform: scale(1);
+      }
     }
   }
 
@@ -102,9 +121,19 @@
       display: flex;
       align-items: center;
       position: absolute;
-      left: 112px;
-      top: 50%;
-      transform: translateY(-50%);
+      left: 15px;
+      bottom: 50px;
+
+      @media (min-width: 62em) {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+      }
+
+      @media (min-width: 80em) {
+        top: 50%;
+        left: 112px;
+      }
 
       @media (min-width: 1470px) {
         left: auto;
@@ -116,7 +145,17 @@
   
         li {
           display: inline-block;
-          margin-bottom: 40px;
+          margin-bottom: 18px;
+
+          @media (min-width: 62em) {
+            margin-bottom: 24px;
+          }
+          @media (min-width: 80em) {
+            margin-bottom: 32px;
+          }
+          @media (min-width: 100em) {
+            margin-bottom: 40px;
+          }
         }
   
         button {
@@ -130,6 +169,11 @@
           opacity: 0.37;
           outline: none;
           cursor: pointer;
+
+          @media (min-width: 62em) {
+            width: 10px;
+            height: 10px;
+          }
         }
   
         .slick-active {
@@ -146,30 +190,63 @@
   .slick-counter {
     display: flex;
     align-items: center;
-    margin-bottom: 84px;
+    margin-bottom: 40px;
     font-weight: bold;
-    font-size: rem(52);
+    font-size: rem(24);
     line-height: 1;
     letter-spacing: 0.1em;
     color: $brand;
+
+    @media (min-width: 36em) {
+      font-size: rem(32);
+    }
+    @media (min-width: 62em) {
+      margin-bottom: 50px;
+      font-size: rem(40);
+    }
+    @media (min-width: 80em) {
+      margin-bottom: 74px;
+      font-size: rem(48);
+    }
+    @media (min-width: 100em) {
+      margin-bottom: 84px;
+      font-size: rem(52);
+    }
 
     &:before {
       content: '';
       flex: none;
       display: block;
       width: 0;
-      height: 51px;
-      border-left: 4px solid $brand;
-      margin-bottom: 16px;
+      height: 24px;
+      border-left: 3px solid $brand;
+      margin-bottom: 12px;
+      
+      @media (min-width: 48em) {
+        height: 36px;
+      }
+      @media (min-width: 80em) {
+        height: 46px;
+        margin-bottom: 16px;
+        border-width: 4px;
+      }
+      @media (min-width: 100em) {
+        height: 51px;
+      }
     }
   }
 
   &__down.icon {
     position: absolute;
     bottom: 18.5vh;
-    left: 100%;
+    left: 0;
     transform: translateX(-50%);
     z-index: 10;
+    display: none;
+
+    @media (min-width: 62em) {
+      display: block;
+    }
   }
 }
 

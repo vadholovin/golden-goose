@@ -47,8 +47,11 @@
   &__desc.desc {
     position: relative;
     // padding-left: 115px;
-    padding-left: 9.375vw;
-    padding-right: 7vw;
+
+    @media (min-width: 48em) {
+      padding-left: 9.375vw;
+      padding-right: 7vw;
+    }
 
     @media (min-width: 62em) {
       padding-left: 5.83vw;

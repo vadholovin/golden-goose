@@ -63,6 +63,16 @@
   }
 
   &--offers {
+    font-size: rem(23);
+
+    @media (min-width: 36em) {
+      font-size: rem(36);
+    }
+  
+    @media (min-width: 48em) {
+      font-size: rem(40);
+    }
+
     @media (min-width: 62em) {
       font-size: rem(38);
     }

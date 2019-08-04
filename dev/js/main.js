@@ -41,10 +41,11 @@ $(document).ready(function () {
     slidesToScroll: 1,
     infinite: true,
     dots: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     arrows: false,
     pauseOnHover: false,
+    pauseOnFocus: false,
     appendDots: '.hero-slider__dots',
   });
 });
@@ -70,3 +71,22 @@ $(document).ready(function () {
   });
 
 })();
+
+/*------------------------------------*\
+  #Scroll Navbar
+\*------------------------------------*/
+
+(function($) {
+
+  $(window).scroll(function(){	
+    "use strict";	
+    var b = $(window).scrollTop();
+    
+    if( b > 50) {		
+      $(".hamburger").addClass("hamburger--scroll");
+    } else {
+      $(".hamburger").removeClass("hamburger--scroll");
+    }
+  });
+  
+})( jQuery );

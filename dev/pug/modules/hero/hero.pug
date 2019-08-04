@@ -19,10 +19,6 @@
           .hero-slider__dots
             .slick-counter 01
 
-        a.icon.icon-mouse.hero__down(
-          href="#about"
-        )
-
       .hero__col.hero__col--right.overlay(
         style="background-image: url(img/general/bg/img-1.jpg);"
       )
@@ -36,7 +32,8 @@
               input.form-input#checkin(
                 type="text",
                 name="checkin",
-                placeholder="19 июня 2019"
+                placeholder="19 июня 2019",
+                readonly
               )
               label.icon.icon-calendar(for="checkin")
           .form-row
@@ -46,7 +43,8 @@
               input.form-input#checkout(
                 type="text",
                 name="checkout",
-                placeholder="19 июня 2019"
+                placeholder="19 июня 2019",
+                readonly
               )
               label.icon.icon-calendar(for="checkout")
           .form-row
@@ -55,4 +53,6 @@
             ) найти номер
               svg.arrow
                 use(xlink:href="img/icons/arrow-r-golden.svg#arrow")
-  
+        a.icon.icon-mouse.hero__down(
+          href="#about"
+        )
