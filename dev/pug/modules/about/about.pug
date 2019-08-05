@@ -12,19 +12,30 @@ section.about
           img(src="img/content/about/img-1.jpg", alt="")
     
     .about__features
-      .about__feature.about-feature
+      .about__feature.about-feature(
+        data-aos="fade-up"
+      )
         span.icon.icon-wifi
         span.about-feature__title бесплатный wi-fi
         span.about-feature__notes во всех номерах
-      .about__feature.about-feature
+      .about__feature.about-feature(
+        data-aos="fade-up",
+        data-aos-delay="100"
+      )
         span.icon.icon-tv
         span.about-feature__title телевидение
         span.about-feature__notes 20 каналов
-      .about__feature.about-feature
+      .about__feature.about-feature(
+        data-aos="fade-up",
+        data-aos-delay="200"
+      )
         span.icon.icon-parking
         span.about-feature__title бесплатная парковка
         span.about-feature__notes для постояльцев дома
-      .about__feature.about-feature
+      .about__feature.about-feature(
+        data-aos="fade-up",
+        data-aos-delay="300"
+      )
         span.icon.icon-plate
         span.about-feature__title завтрак
         span.about-feature__notes входит в стоимость
@@ -42,7 +53,10 @@ section.about
             | Регистрация заезда – с 14:00
             br
             | Регистрация отъезда – до 12:00
-          button.button.button--arrow
+          button.button.button--arrow(
+            data-aos="zoom-in-up",
+            data-aos-duration="500"
+          )
             | забронировать номер
             svg.arrow
               use(xlink:href="img/icons/arrow-r-golden.svg#arrow")

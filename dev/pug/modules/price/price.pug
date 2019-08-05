@@ -2,7 +2,9 @@ section.price
   .container.container--wider
     h2.price__title.title.title--dash.title--dash-bottom#price номера и цены
     .price__grid
-      .price__col
+      .price__col(
+        data-aos="flip-left"
+      )
         .price__item.price-item
           img(src="img/content/price/img-1.jpg", alt="")
           h3.price-item__title эконом
@@ -11,7 +13,10 @@ section.price
             span.price-item__cost-money рублей
           a.price-item__more(href="#") подробнее
           button.button забронировать
-      .price__col
+      .price__col(
+        data-aos="flip-left",
+        data-aos-delay="100"
+      )
         .price__item.price-item
           img(src="img/content/price/img-2.jpg", alt="")
           h3.price-item__title стандарт
@@ -20,7 +25,10 @@ section.price
             span.price-item__cost-money рублей
           a.price-item__more(href="#") подробнее
           button.button забронировать
-      .price__col
+      .price__col(
+        data-aos="flip-left",
+        data-aos-delay="200"
+      )
         .price__item.price-item
           img(src="img/content/price/img-3.jpg", alt="")
           h3.price-item__title стандарт +
@@ -29,7 +37,10 @@ section.price
             span.price-item__cost-money рублей
           a.price-item__more(href="#") подробнее
           button.button забронировать
-      .price__col
+      .price__col(
+        data-aos="flip-left",
+        data-aos-delay="300"
+      )
         .price__item.price-item
           img(src="img/content/price/img-4.jpg", alt="")
           h3.price-item__title люкс

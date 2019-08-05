@@ -14,6 +14,7 @@ html(lang="ru-RU")
     //- link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic")
     link(rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css")
     link(rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css")
+    link(rel="stylesheet" type='text/css' href="libs/aos/aos.css")
     link(rel="stylesheet" type='text/css' href="css/styles.min.css")
 
     <!--[if lt IE 9]>
@@ -24,10 +25,15 @@ html(lang="ru-RU")
     .content
       block content
     include ../modules/footer/footer
+    include ../modules/modals/modal-answer
+    
     script(src="js/jquery-3.3.1.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
     script(src="libs/datepicker/datepicker-ru.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
     script(src="libs/smooth-scroll/smooth-scroll.polyfills.min.js")
+    script(src="libs/micromodal/micromodal.min.js")
+    script(src="libs/aos/aos.js")
+    script(src="libs/jquery-validate/jquery.validate.min.js")
     script(src="js/main.js")
     block script
