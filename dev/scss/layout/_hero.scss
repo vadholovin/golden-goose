@@ -28,6 +28,10 @@
       flex-direction: column;
       align-items: center;
       padding: 60px 15px 60px 15px;
+      background-color: #000;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
 
       @media (min-width: 62em) {
         justify-content: flex-end;
@@ -35,6 +39,7 @@
         flex: 1 1 45.5%;
         max-width: 45.5%;
         padding-bottom: 90px;
+        background-image: url(../img/general/bg/img-1.jpg);
       }
 
       @media (min-width: 80em) {
@@ -259,6 +264,7 @@
   &__label {
     display: block;
     margin-right: 24px;
+    color: #fff;
   }
 
   .form-control__wrapper,
