@@ -117,14 +117,36 @@ $(document).ready(function () {
 
     form.validate({
       rules: {
-        'user-name': 'required',
-        'user-email': 'required',
-        'user-message': 'required',
+        'user-name': {
+          required: true,
+          minlength: 3,
+          maxlength: 20,
+          lettersonly: true,
+        },
+        'user-email': {
+          required: true,
+          email: true,
+        },
+        'user-message': {
+          required: true,
+          minlength: 10,
+        },
       },
       messages: {
-        'user-name': 'Ошибка',
-        'user-email': 'Ошибка',
-        'user-message': 'Ошибка',
+        'user-name': {
+          required: 'Обязательное поле',
+          minlength: jQuery.validator.format('Слишком короткое имя'),
+          maxlength: jQuery.validator.format('Слишком длинное имя'),
+          lettersonly: jQuery.validator.format('Допускается только текст'),
+        },
+        'user-email': {
+          required: 'Обязательное поле',
+          email: 'Укажите правильный имейл',
+        },
+        'user-message': {
+          required: 'Обязательное поле',
+          minlength: jQuery.validator.format('Слишком короткий текст'),
+        },
       },
     });
 
