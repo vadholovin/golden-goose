@@ -53,6 +53,32 @@ $(document).ready(function () {
   $('#checkin, #checkout').datepicker({
     dateFormat : 'dd MM yy',
   });
+
+  // Calendar
+  var months = ($(window).width() < 768) ?  1 : 2;
+  $('.js-calendar').datepicker({
+    dateFormat : 'dd MM yy',
+    numberOfMonths: months,
+    buttonImage: '',
+  });
+
+  var debounce;
+  $(window).resize(function() {
+    clearTimeout(debounce);
+    if ($(window).width() < 768) {
+      debounce = setTimeout(function() {
+        debounceDatepicker(1);
+      }, 250);
+    } else {
+      debounce = setTimeout(function() {
+        debounceDatepicker(2)
+      }, 250);
+    }
+  }).trigger('resize');
+
+  function debounceDatepicker(num) {
+    $('.js-calendar').datepicker('option', 'numberOfMonths', num);
+  }
 });
 
 
@@ -199,3 +225,18 @@ $(document).ready(function () {
     }
   }
 });
+
+
+/**
+ * Fancybox init
+ */
+jQuery(document).ready(function ($) {
+  $('[data-fancybox="gallery"]').fancybox({
+    buttons: [
+      "close"
+    ],
+  });
+});
+
+
+

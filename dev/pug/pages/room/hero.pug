@@ -1,0 +1,60 @@
+.hero#hero
+  .container--fluid
+    .hero__grid
+      .hero__col.hero__col--left
+        .hero__box
+          .brand.brand--hero
+            img(src="img/general/logo.png", alt="")
+          h1.hero__title номер стандарт +
+          button.button.button--light.button--panorama
+            | панорама номера
+        
+        .hero-slider__wrapper
+          .hero__slider.hero-slider.js-hero-slider
+            .hero-slider__item
+              img(src="img/content/hero/img-1.jpg", alt="")
+            .hero-slider__item
+              img(src="img/content/hero/img-1.jpg", alt="")
+            .hero-slider__item
+              img(src="img/content/hero/img-1.jpg", alt="")
+          .hero-slider__dots
+            .slick-counter 01
+
+      .hero__col.hero__col--right.overlay
+        form.hero__form.hero-form.form(
+          action=""
+        )
+          .hero-form__cost
+            span.hero-form__cost-value 2300 .. 3900 ₽
+            span.hero-form__cost-notes цена за сутки
+          .form-row
+            label.hero-form__label(for="checkin")
+              | Выезд
+            .form-control__wrapper
+              input.form-input#checkin(
+                type="text",
+                name="checkin",
+                placeholder="19 июня 2019",
+                readonly
+              )
+              label.icon.icon-calendar(for="checkin")
+          .form-row
+            label.hero-form__label(for="checkout")
+              | Заезд
+            .form-control__wrapper
+              input.form-input#checkout(
+                type="text",
+                name="checkout",
+                placeholder="19 июня 2019",
+                readonly
+              )
+              label.icon.icon-calendar(for="checkout")
+          .form-row
+            button.button.button--arrow(
+              type="submit"
+            ) найти номер
+              svg.arrow
+                use(xlink:href="img/icons/arrow-r-golden.svg#arrow")
+        a.icon.icon-mouse.hero__down(
+          href="#about"
+        )

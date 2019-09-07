@@ -1,0 +1,35 @@
+section.feedback.feedback--room
+  .container
+    h2.feedback__title.title.title--dash.title--dash-bottom
+      | остались вопросы?
+    form.feedback__form.feedback__form--room.form#formFeedback
+      .feedback__form-left
+        label.form-label(for="user-name") ваше имя
+        .form-control__wrapper
+          input.form-input#user-name(
+            type="text",
+            name="user-name",
+            placeholder="Введите имя"
+          )
+        label.form-label(for="user-email") email
+        .form-control__wrapper
+          input.form-input#user-email(
+            type="text",
+            name="user-email",
+            placeholder="Введите email"
+          )
+
+      .feedback__form-right
+        label.form-label(for="user-message") сообщение
+        .form-control__wrapper.form-control__wrapper--textarea
+          textarea.form-textarea#user-message(
+            type="text",
+            name="user-message",
+            rows="1",
+            placeholder="Ваш вопрос"
+          )
+        button.button.button--arrow(
+          type="submit"
+        ) отправить
+          svg.arrow
+            use(xlink:href="img/icons/arrow-r-golden.svg#arrow")

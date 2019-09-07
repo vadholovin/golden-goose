@@ -1,0 +1,63 @@
+/* ==========================================================================
+   #BACK-TEXT
+   ========================================================================== */
+
+.back-text {
+  @include fluid-type($min_width, $max_width, 100px, 268px);
+
+  font-weight: bold;
+  line-height: 1.15;
+  letter-spacing: 0.07em;
+  color: rgba(208, 208, 208, .2);
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+.back-text--about {
+  left: -20px;
+
+  @media (min-width: 48em) {
+    left: -44px;
+  }
+}
+
+
+.back-text--price {
+  transform: translateY(-38%);
+
+  @media (min-width: 48em) {
+    left: 30%;
+  }
+
+  @media (min-width: 100em) {
+    left: 46%;
+  }
+}
+
+
+.back-text--services {
+  transform: translateY(-18%);
+}
+
+
+.back-text--offers {
+  transform: translate(-4%, -40%);
+
+  @media (min-width: 62em) {
+    transform: translate(-2%, -10%);
+  }
+}
+
+
+.back-text--contact {
+  transform: translate(-5%, -40%);
+
+  @media (min-width: 120em) {
+    transform: translate(-24%, -40%);
+  }
+}

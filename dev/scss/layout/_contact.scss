@@ -1,0 +1,75 @@
+/* ==========================================================================
+   #CONTACT
+   ========================================================================== */
+
+.contact {
+  position: relative;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 62em) {
+    order: -1;
+  }
+
+  &__inner {
+    position: relative;
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__address {
+    margin-bottom: 24px;
+  }
+}
+
+
+.contact__map {
+  position: relative;
+  height: 374px;
+  overflow: hidden;
+
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.contact__map--main {
+
+  
+  @media (min-width: 62em) {
+    height: 600px;
+  }
+
+  @media (min-width: 80em) {
+    height: 812px;
+  }
+}
+
+
+/* #contact--room
+   ========================================================================== */
+
+.contact--room {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @media (min-width: 62em) {
+    padding-bottom: 80px;
+  }
+  @media (min-width: 80em) {
+    padding-bottom: 100px;
+  }
+  @media (min-width: 100em) {
+    padding-bottom: 130px;
+  }
+}

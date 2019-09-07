@@ -99,4 +99,29 @@
       color: #fff;
     }
   }
+
+
+  &--panorama {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    line-height: 1.8;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 32px;
+      height: 32px;
+      margin-right: 13px;
+      background-image: url(../img/icons/panorama.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+  }
 }

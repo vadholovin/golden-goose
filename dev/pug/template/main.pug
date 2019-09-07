@@ -12,28 +12,35 @@ html(lang="ru-RU")
     meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="keywords" content="")
     //- link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic")
-    link(rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css")
-    link(rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css")
+    link(rel="stylesheet" type='text/css' href="libs/jquery-ui/jquery-ui.min.css")
+    link(rel="stylesheet" type='text/css' href="libs/slick/slick.css")
     link(rel="stylesheet" type='text/css' href="libs/aos/aos.css")
+    link(rel="stylesheet" type='text/css' href="libs/fancybox/jquery.fancybox.min.css")
+    link(rel="stylesheet" type='text/css' href="libs/daterangepicker/daterangepicker.css")
     link(rel="stylesheet" type='text/css' href="css/styles.min.css")
 
     <!--[if lt IE 9]>
     script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
     <![endif]-->
-  body
+  body(class= pageClass)
     include ../modules/header/header
     .content
       block content
     include ../modules/footer/footer
     include ../modules/modals/modal-answer
     
+    include ../modules/svg-sprite/sprite
+    
     script(src="js/jquery-3.3.1.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+    script(src="libs/jquery-ui/jquery-ui.min.js")
+    script(src="libs/daterangepicker/moment.min.js")
+    script(src="libs/daterangepicker/daterangepicker.min.js")
     script(src="libs/datepicker/datepicker-ru.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
+    script(src="libs/slick/slick.min.js")
     script(src="libs/smooth-scroll/smooth-scroll.polyfills.min.js")
     script(src="libs/micromodal/micromodal.min.js")
     script(src="libs/aos/aos.js")
+    script(src="libs/fancybox/jquery.fancybox.min.js")
     script(src="libs/jquery-validate/jquery.validate.min.js")
     script(src="libs/jquery-validate/lettersonly.js")
     script(src="js/main.js")

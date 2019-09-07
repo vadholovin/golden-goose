@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .about {
+  position: relative;
   padding-top: 60px;
   padding-bottom: 80px;
 
@@ -54,10 +55,10 @@
   margin: 0 40px 30px 40px;
   text-align: center;
 
-  .icon {
+  &__icon {
     display: inline-flex;
     align-items: flex-end;
-    height: 59px;
+    height: 62px;
     margin-bottom: 24px;
   }
 
@@ -115,4 +116,24 @@
   .button {
     width: 318px;
   }
+}
+
+
+/* #about--room
+   ========================================================================== */
+
+.about--room {
+  padding-bottom: 34px;
+
+  @media (min-width: 80em) {
+    padding-bottom: 100px;
+  }
+  @media (min-width: 100em) {
+    padding-bottom: 110px;
+  }
+}
+
+
+.about--room .about__features {
+  margin-bottom: 0;
 }

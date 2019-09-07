@@ -1,0 +1,39 @@
+-
+  var photos = [
+    {
+      src: 'img/content/room-gallery/img-1.jpg'
+    },
+    {
+      src: 'img/content/room-gallery/img-2.jpg'
+    },
+    {
+      src: 'img/content/room-gallery/img-3.jpg'
+    },
+    {
+      src: 'img/content/room-gallery/img-4.jpg'
+    },
+    {
+      src: 'img/content/room-gallery/img-5.jpg'
+    },
+    {
+      src: 'img/content/room-gallery/img-6.jpg'
+    },
+  ];
+
+
+section.gallery
+  .container
+    h2.gallery__title.title.title--dash.title--dash-bottom
+      | Фотогалерея
+    .gallery__list
+      each photo in photos
+        a.gallery__item(
+          href= photo.src,
+          data-fancybox="gallery"
+        )
+          img(
+            src= photo.src,
+            alt=""
+          )
+    button.button.button--gallery-more
+      | показать еще

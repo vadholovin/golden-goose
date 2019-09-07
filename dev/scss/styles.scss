@@ -25,7 +25,11 @@
 @import 'layout/services';
 @import 'layout/banner';
 @import 'layout/offers-n-contact';
+@import 'layout/contact';
 @import 'layout/feedback';
+@import 'layout/gallery';
+@import 'layout/calendar';
+@import 'layout/booking';
 @import 'layout/footer';
 
 
@@ -38,6 +42,7 @@
 @import 'components/title';
 @import 'components/desc';
 @import 'components/form';
+@import 'components/back-text';
 @import 'components/content-img';
 @import 'components/modal';
 

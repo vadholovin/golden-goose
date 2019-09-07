@@ -2,7 +2,7 @@
   #DESC
 \*------------------------------------*/
 
-.desc {
+.inner-block {
   // padding-left: 180px;
   // padding-right: 50px;
 
@@ -11,7 +11,7 @@
     padding-right: 2.6vw;
   }
 
-  > *:not(h3) {
+  > *:not(h2):not(h3):not(form) {
     margin-bottom: 26px;
   }
 

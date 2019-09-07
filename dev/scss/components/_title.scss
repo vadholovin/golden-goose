@@ -3,28 +3,13 @@
 \*------------------------------------*/
 
 .title {
+  @include fluid-type($min_width, $max_width, 28px, 48px);
+
   font-weight: bold;
-  font-size: rem(28);
   line-height: 1.2;
   letter-spacing: 0.07em;
   color: $black;
   text-transform: uppercase;
-
-  @media (min-width: 36em) {
-    font-size: rem(36);
-  }
-
-  @media (min-width: 48em) {
-    font-size: rem(40);
-  }
-
-  @media (min-width: 62em) {
-    font-size: rem(44);
-  }
-
-  @media (min-width: 1470px) {
-    font-size: rem(48);
-  }
 
   &--dash {
     position: relative;
@@ -33,8 +18,8 @@
       content: '';
       flex: none;
       display: block;
-      // width: 149px;
       width: 7.76vw;
+      max-width: 150px;
       height: 0;
       border: 1px solid #000;
     }
@@ -63,26 +48,16 @@
   }
 
   &--offers {
-    font-size: rem(23);
-
-    @media (min-width: 36em) {
-      font-size: rem(36);
-    }
-  
-    @media (min-width: 48em) {
-      font-size: rem(40);
-    }
-
-    @media (min-width: 62em) {
-      font-size: rem(38);
-    }
-
-    @media (min-width: 80em) {
-      font-size: rem(44);
-    }
-  
-    @media (min-width: 1470px) {
-      font-size: rem(48);
-    }
+    @include fluid-type($min_width, $max_width, 23px, 48px);
   }
+}
+
+
+.room-page .title {
+  @include fluid-type($min_width, $max_width, 28px, 46px);
+}
+
+
+.room-page .title--dash-bottom {
+  margin-bottom: 1.95em;
 }
