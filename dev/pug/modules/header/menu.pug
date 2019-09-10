@@ -1,0 +1,56 @@
+-
+  var main = [
+    {
+      link: '/',
+      title: 'главная',
+    },
+    {
+      link: '#price',
+      title: 'номера и цены',
+    },
+    {
+      link: '#booking',
+      title: 'бронирование',
+    },
+    {
+      link: '#services',
+      title: 'услуги',
+    },
+    {
+      link: '#offers',
+      title: 'спецпредложения',
+    },
+    {
+      link: '#contact',
+      title: 'контакты',
+    },
+  ];
+
+-
+  var inner = [
+    {
+      link: '/',
+      title: 'главная',
+    },
+    {
+      link: '#booking',
+      title: 'бронирование',
+    },
+    {
+      link: '#gallery',
+      title: 'Фотогалерея',
+    },
+    {
+      link: '#contact',
+      title: 'контакты',
+    },
+  ];
+
+
+if pageClass == 'index-page'
+  each item in main
+    a.menu__link(href= item.link)= item.title
+
+if pageClass == 'room-page'
+  each item in inner
+    a.menu__link(href= item.link)= item.title

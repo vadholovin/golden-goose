@@ -10,12 +10,7 @@ header.header
           span.hamburger-inner
 
       .header__menu.menu.menu--main
-        a.menu__link(href="#hero") главная
-        a.menu__link(href="#price") номера и цены
-        a.menu__link(href="#booking") бронирование
-        a.menu__link(href="#services") услуги
-        a.menu__link(href="#offers") спецпредложения
-        a.menu__link(href="#contact") контакты
+        include menu
 
       .header__contacts.header__contacts--main
         | г. Кисловодск,
@@ -28,12 +23,7 @@ header.header
       .mobile-nav__content
         .mobile-nav__container.container
           .menu.menu--mobile
-            a.menu__link(href="#hero") главная
-            a.menu__link(href="#price") номера и цены
-            a.menu__link(href="#booking") бронирование
-            a.menu__link(href="#services") услуги
-            a.menu__link(href="#offers") спецпредложения
-            a.menu__link(href="#contact") контакты
+            include menu
           .header__contacts.header__contacts--mobile
             | г. Кисловодск,
             br

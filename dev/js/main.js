@@ -235,6 +235,31 @@ jQuery(document).ready(function ($) {
     buttons: [
       "close"
     ],
+    hash: false,
+  });
+});
+
+
+
+/**
+ * Back to top
+ */
+jQuery(document).ready(function ($) {
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 800) {
+      $('#back_to_top').removeClass('off')
+      $('#back_to_top').addClass('on')
+    } else {
+      $('#back_to_top').removeClass('on')
+      $('#back_to_top').addClass('off')
+    }
+  });
+
+  $(document).on('click', '#back_to_top', function (e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0
+    }, 1000);
   });
 });
 
