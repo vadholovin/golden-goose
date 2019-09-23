@@ -23,9 +23,9 @@
         form.hero__form.hero-form.form(
           action=""
         )
-          .form-row
+          .form-row.form-row--hero
             label.hero-form__label(for="checkin")
-              | Выезд
+              | Заезд
             .form-control__wrapper
               input.form-input#checkin(
                 type="text",
@@ -34,9 +34,9 @@
                 readonly
               )
               label.icon.icon-calendar(for="checkin")
-          .form-row
+          .form-row.form-row--hero
             label.hero-form__label(for="checkout")
-              | Заезд
+              | Выезд
             .form-control__wrapper
               input.form-input#checkout(
                 type="text",

@@ -35,6 +35,10 @@
   }
 }
 
+.modal__container--wider {
+  max-width: 810px;
+}
+
 .modal__close {
   position: absolute;
   top: 0;

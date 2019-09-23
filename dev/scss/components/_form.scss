@@ -4,6 +4,9 @@
 
 .form-row {
   display: flex;
+}
+
+.form-row--hero {
   align-items: center;
   margin-bottom: 16px;
 
@@ -16,6 +19,11 @@
   }
 }
 
+.form-row--modal-booking {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .form-control__wrapper {
   position: relative;
   width: 100%;
@@ -24,6 +32,10 @@
     font-size: 13px;
     color: red;
   }
+}
+
+.form--modal-booking .form-control__wrapper {
+  margin-bottom: 3.5rem;
 }
 
 .form-label {

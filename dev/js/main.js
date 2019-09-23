@@ -247,11 +247,11 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
   $(window).scroll(function () {
     if ($(document).scrollTop() > 800) {
-      $('#back_to_top').removeClass('off')
-      $('#back_to_top').addClass('on')
+      $('#back_to_top').removeClass('off');
+      $('#back_to_top').addClass('on');
     } else {
-      $('#back_to_top').removeClass('on')
-      $('#back_to_top').addClass('off')
+      $('#back_to_top').removeClass('on');
+      $('#back_to_top').addClass('off');
     }
   });
 
