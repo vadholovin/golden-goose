@@ -27,24 +27,22 @@
             label.hero-form__label(for="checkin")
               | Заезд
             .form-control__wrapper
-              input.form-input#checkin(
+              input.form-input.form-input--date.js-date#checkin(
                 type="text",
                 name="checkin",
-                placeholder="19 июня 2019",
+                placeholder="дд.мм.гг",
                 readonly
               )
-              label.icon.icon-calendar(for="checkin")
           .form-row.form-row--hero
             label.hero-form__label(for="checkout")
               | Выезд
             .form-control__wrapper
-              input.form-input#checkout(
+              input.form-input.form-input--date.js-date#checkout(
                 type="text",
                 name="checkout",
-                placeholder="19 июня 2019",
+                placeholder="дд.мм.гг",
                 readonly
               )
-              label.icon.icon-calendar(for="checkout")
           .form-row
             button.button.button--arrow(
               type="submit"

@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.93);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,10 +35,6 @@
   }
 }
 
-.modal__container--wider {
-  max-width: 810px;
-}
-
 .modal__close {
   position: absolute;
   top: 0;
@@ -48,6 +44,10 @@
   line-height: 1;
   background: transparent;
   border: 0;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .modal__close:before {
@@ -55,20 +55,22 @@
 }
 
 .modal__content {
+  width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
-  text-align: center;
 }
 
 .answer-title {
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .answer-text {
   font-size: 1.2rem;
+  text-align: center;
 }
 
 @-webkit-keyframes mmfadeIn {
@@ -185,4 +187,67 @@
 .modal .modal__container,
 .modal .modal__overlay {
   will-change: transform;
+}
+
+
+/* #modal--booking
+   ========================================================================== */
+
+.modal--booking {
+
+}
+
+
+.modal--booking .modal__container {
+  background-color: transparent;
+  max-width: none;
+}
+
+.modal--booking .modal__close {
+  top: 2rem;
+  right: 0.5rem;
+  color: #fff;
+  font-size: rem(24);
+
+  @media (min-width: 62em) {
+    font-size: 1.75rem;
+    right: 1rem;
+  }
+}
+
+
+.modal--booking .modal__content {
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+
+  @media (min-width: 62em) {
+    max-width: 690px;
+  }
+}
+
+
+.modal-booking__total {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
+  }
+}
+
+
+.modal-booking__price {
+  margin-bottom: 4px;
+  line-height: 1.15;
+  letter-spacing: 0.1em;
+}
+
+
+.modal-booking__price--bigger {
+  @include fluid-type($min_width, $max_width, 24px, 36px);
+  
+  letter-spacing: 0.075em;
 }

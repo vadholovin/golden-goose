@@ -47,11 +47,19 @@ $(document).ready(function () {
 
 
 /**
+ * #Inputmask
+ */
+$(document).ready(function () {
+  $('.js-phone').inputmask('+7 999-999-99-99');
+});
+
+
+/**
  * #Datepicker
  */
 $(document).ready(function () {
-  $('#checkin, #checkout').datepicker({
-    dateFormat : 'dd MM yy',
+  $('.js-date').datepicker({
+    dateFormat : 'dd.mm.yy',
   });
 
   // Calendar
@@ -92,11 +100,45 @@ $(document).ready(function () {
 })();
 
 
+$(document).ready(function () {
+  $('.js-increment-plus, .js-increment-minus').click(function (e) { 
+    e.preventDefault();
+    var target = $(this),
+        parent = target.closest('.js-increment'),
+        input = parent.find('input'),
+        inputVal = +input.val(),
+        field = parent.find('.js-increment-value');
+
+    if (target.is('.js-increment-plus')) {
+      input.val(++inputVal);
+      field.text(inputVal);
+    } else if (target.is('.js-increment-minus')) {
+      if (inputVal > 0) {
+        input.val(--inputVal);
+        field.text(inputVal);
+      }
+    }
+  });
+});
+
+
 /**
  * #Micromodal init
  */
 (function () {
-  MicroModal.init();
+  var body = document.body;
+  var site = document.documentElement;
+
+  MicroModal.init({
+    onShow: function () {
+      body.classList.add('is-overflowed');
+      site.classList.add('is-overflowed');
+    },
+    onClose: function () {
+      body.classList.remove('is-overflowed');
+      site.classList.remove('is-overflowed');
+    },
+  });
 })();
 
 
@@ -135,13 +177,11 @@ $(document).ready(function () {
  * #Form validation
  */
 $(document).ready(function () {
-
   $('#formFeedback').submit(function(e){
     e.preventDefault();
-
     var form = $('#formFeedback');
 
-    form.validate({
+    var validator = form.validate({
       rules: {
         'user-name': {
           required: true,
@@ -187,21 +227,123 @@ $(document).ready(function () {
     }
   });
 
+  $('#formBooking').submit(function(e){
+    e.preventDefault();
+    var form = $('#formBooking');
+
+    var validator = form.validate({
+      rules: {
+        'user-name-booking': {
+          required: true,
+          minlength: 3,
+          maxlength: 20,
+          lettersonly: true,
+        },
+        'user-email-booking': {
+          required: true,
+          email: true,
+        },
+        'user-phone-booking': {
+          required: true,
+          minlength: 10,
+        },
+        'checkin-booking': {
+          required: true,
+        },
+        'checkout-booking': {
+          required: true,
+        },
+        'guests-adult-booking': {
+          required: true,
+          min: 1,
+        },
+        'user-acceptance': {
+          required: true,
+        },
+      },
+      messages: {
+        'user-name-booking': {
+          required: 'Обязательное поле',
+          minlength: jQuery.validator.format('Слишком короткое имя'),
+          maxlength: jQuery.validator.format('Слишком длинное имя'),
+          lettersonly: jQuery.validator.format('Допускается только текст'),
+        },
+        'user-email-booking': {
+          required: 'Обязательное поле',
+          email: 'Укажите правильный имейл',
+        },
+        'user-phone-booking': {
+          required: 'Обязательное поле',
+          email: 'Укажите правильный телефон',
+        },
+        'checkin-booking': {
+          required: 'Обязательное поле',
+        },
+        'checkout-booking': {
+          required: 'Обязательное поле',
+        },
+        'guests-adult-booking': {
+          required: 'Обязательное поле',
+          min: 'Обязательное поле',
+        },
+        'user-acceptance': {
+          required: 'Обязательное поле',
+        },
+      },
+    });
+
+    if(form.valid()) {
+      $.ajax({
+        url : 'booking.php',
+        type: 'POST',
+        data: $(this).serialize(),
+      }).done(function(res) {
+        hideModalForm()
+        answer(res);
+      });
+    }
+
+    function removeOver() {
+      var body = document.body;
+      var site = document.documentElement;
+      body.classList.remove('is-overflowed');
+      site.classList.remove('is-overflowed');
+    }
+  
+    function hideModalForm() {
+      removeOver();
+      MicroModal.close('modal-booking');
+    }
+  });
+
 
   // Answers
+  var resp = {
+    positiveResp: {
+      title: 'Спасибо!',
+      text: 'Мы скоро свяжемся с Вами'
+    },
+    negativeResp: {
+      title: 'Произошла ошибка!',
+      text: 'Попробуйте позже'
+    }
+  };
+
   function answer(res) {
     var answerTitle = document.querySelector('.modal--answer .answer-title');
     var answerText = document.querySelector('.modal--answer .answer-text');
 
-    var positiveResp = {
-      title: 'Спасибо!',
-      text: 'Мы скоро свяжемся с Вами'
-    };
+    if(res == "done"){
+      answerTitle.textContent = resp.positiveResp.title;
+      answerText.textContent = resp.positiveResp.text;
+    }
+    if(res == "error"){
+      answerTitle.textContent = resp.negativeResp.title;
+      answerText.textContent = resp.negativeResp.text;
+    }
 
-    var negativeResp = {
-      title: 'Произошла ошибка!',
-      text: 'Попробуйте позже'
-    };
+    MicroModal.show('modal-answer');
+    hideAnswer();
 
     function hideAnswer() {
       setTimeout(function() {
@@ -209,19 +351,6 @@ $(document).ready(function () {
         answerTitle.textContent = "";
         answerText.textContent = "";
       }, 3000);
-    }
-
-    if(res == "error"){
-      answerTitle.textContent = negativeResp.title;
-      answerText.textContent = negativeResp.text;
-      MicroModal.show('modal-answer');
-      hideAnswer();
-    }
-    if(res == "done"){
-      answerTitle.textContent = positiveResp.title;
-      answerText.textContent = positiveResp.text;
-      MicroModal.show('modal-answer');
-      hideAnswer();
     }
   }
 });

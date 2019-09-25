@@ -41,7 +41,9 @@
   },
   "dependencies": {
     "daterangepicker": "^3.0.5",
+    "inputmask": "^5.0.0-beta.258",
     "jquery-dropdown-datepicker": "^1.3.0",
+    "micromodal": "^0.4.2",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9"
   }

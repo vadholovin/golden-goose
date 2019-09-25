@@ -61,3 +61,17 @@
 .room-page .title--dash-bottom {
   margin-bottom: 1.95em;
 }
+
+
+.modal--booking .title--dash {
+  margin-bottom: 3.5rem;
+
+  @media (min-width: 100em) {
+    margin-bottom: 7.25rem;
+  }
+}
+
+
+.modal--booking .title--dash:after {
+  border-color: #fff;
+}

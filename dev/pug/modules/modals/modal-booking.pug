@@ -1,65 +1,92 @@
 .modal.modal--booking#modal-booking(aria-hidden='true')
   .modal__overlay(tabindex='-1', data-micromodal-close='')
-    .modal__container.modal__container--wider(role='dialog', aria-modal='true')
+    .modal__container(role='dialog', aria-modal='true')
       button.modal__close(aria-label='Закрыть попап', data-micromodal-close='')
       main.modal__content
         form.modal-booking__form.form.form--modal-booking#formBooking
-          h2.modal-booking__title.title.title--dash.title--dash-bottom забронировать номер
-          .form-row.form-row--modal-booking
-            .form-row__col
-              label.hero-form__label(for="checkin-booking")
-                | Заезд
+          h2.title.title--dash.title--dash-bottom.highlight забронировать номер
+          .form-row.pure-g
+            .form-row__col.pure-u-1.pure-u-lg-1-2
+              label.form-label(for="checkin-booking")
+                | Дата заезда
               .form-control__wrapper
-                input.form-input#checkin-booking(
+                input.form-input.form-input--date.js-date#checkin-booking(
                   type="text",
                   name="checkin-booking",
                   placeholder="19.04.2019",
                   readonly
                 )
-                label.icon.icon-calendar(for="checkin-booking")
+                
 
-            .form-row__col
-              label.hero-form__label(for="checkout-booking")
-                | Выезд
+            .form-row__col.pure-u-1.pure-u-lg-1-2
+              label.form-label(for="checkout-booking")
+                | Дата выезда
               .form-control__wrapper
-                input.form-input#checkout-booking(
+                input.form-input.form-input--date.js-date#checkout-booking(
                   type="text",
                   name="checkout-booking",
                   placeholder="24.04.2019",
                   readonly
                 )
-                label.icon.icon-calendar(for="checkout-booking")
-          
-          .form-row.form-row--modal-booking
-            .form-row__col
+
+          .form-row.form-row--align-end.pure-g
+            .form-row__col.pure-u-1.pure-u-lg-1-2
               .form-label размещение в номере
-              .form-inc__row
+              .form-inc__wrap
                 .form-inc__label Взрослые
-                .form-inc__controls
+                .form-inc__controls.js-increment
+                  input.visuallyhidden#guests-adult-booking(
+                    name='guests-adult-booking',
+                    value='0'
+                  )
+                  
                   .form-inc__controls-left
-                    button.form-inc__btn.js-btn-minus(
+                    button.form-inc__btn.js-increment-minus(
                       type='button'
                     )
                       span.form-inc__btn-inner
                         <svg viewBox="0 0 24 24" role="img" aria-label="subtract" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;"><rect height="2" rx="1" width="12" x="6" y="11"></rect></svg>
 
                   .form-inc__controls-center
-                    .form-inc__controls-value(
+                    .form-inc__controls-value.js-increment-value(
                       aria-hidden="true"
                     ) 0
-                      input.visuallyhidden#guests-adult-booking(
-                        name='guests-adult-booking',
-                        value='0'
-                      )
                   .form-inc__controls-right
-                    button.form-inc__btn.js-btn-plus(
+                    button.form-inc__btn.js-increment-plus(
+                      type='button'
+                    )
+                      span.form-inc__btn-inner
+                        <svg viewBox="0 0 24 24" role="img" aria-label="add" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;"><rect height="2" rx="1" width="12" x="6" y="11"></rect><rect height="12" rx="1" width="2" x="11" y="6"></rect></svg>
+            
+            .form-row__col.pure-u-1.pure-u-lg-1-2
+              .form-inc__wrap
+                .form-inc__label <span class="form-inc__label-text">Дети: до 2 лет</span>
+                .form-inc__controls.js-increment
+                  input.visuallyhidden#guests-infant-booking(
+                    name='guests-infant-booking',
+                    value='0'
+                  )
+                  .form-inc__controls-left
+                    button.form-inc__btn.js-increment-minus(
+                      type='button'
+                    )
+                      span.form-inc__btn-inner
+                        <svg viewBox="0 0 24 24" role="img" aria-label="subtract" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;"><rect height="2" rx="1" width="12" x="6" y="11"></rect></svg>
+
+                  .form-inc__controls-center
+                    .form-inc__controls-value.js-increment-value(
+                      aria-hidden="true"
+                    ) 0
+                  
+                  .form-inc__controls-right
+                    button.form-inc__btn.js-increment-plus(
                       type='button'
                     )
                       span.form-inc__btn-inner
                         <svg viewBox="0 0 24 24" role="img" aria-label="add" focusable="false" style="height: 1em; width: 1em; display: block; fill: currentcolor;"><rect height="2" rx="1" width="12" x="6" y="11"></rect><rect height="12" rx="1" width="2" x="11" y="6"></rect></svg>
 
-          .form-row.form-row--modal-booking
-            .form-row__col.form-row__col--full
+          .form-row.pure-g
+            .form-row__col.pure-u-1
               label.form-label(for="user-name-booking") ФИО
               .form-control__wrapper
                 input.form-input#user-name-booking(
@@ -68,8 +95,8 @@
                   placeholder="Введите ваше ФИО"
                 )
           
-          .form-row.form-row--modal-booking
-            .form-row__col
+          .form-row.pure-g
+            .form-row__col.pure-u-1.pure-u-lg-1-2
               label.form-label(for="user-email-booking") email
               .form-control__wrapper
                 input.form-input#user-email-booking(
@@ -77,36 +104,37 @@
                   name="user-email-booking",
                   placeholder="Введите email"
                 )
-            .form-row__col
+            .form-row__col.pure-u-1.pure-u-lg-1-2
               label.form-label(for="user-phone-booking") телефон
               .form-control__wrapper
-                input.form-input#user-phone-booking(
+                input.form-input.js-phone#user-phone-booking(
                   type="tel",
                   name="user-phone-booking",
                   placeholder="+7 ХХХ - ХХХ - ХХ - ХХ"
                 )
-            .form__acceptance-wrapper.form__acceptance-wrapper--modal-booking
-              input.visuallyhidden(
-                type="checkbox",
-                name="user-acceptance",
-                id="user-acceptance",
-                checked
-              )
-              label.form__acceptance-label(
-                for="user-acceptance"
-              )
-                span.form__acceptance-mask
-                | Я принимаю <a href="#" class="highlight link-underline">условия бронирования</a>. Даю согласие на обработку личных персональных данных
+          .form__acceptance-wrapper
+            input.visuallyhidden(
+              type="checkbox",
+              name="user-acceptance",
+              id="user-acceptance",
+              checked
+            )
+            label.form__acceptance-label(
+              for="user-acceptance"
+            )
+              span.form__acceptance-mask
+              span.form__acceptance-label-text Я принимаю <a href="#" class="highlight link-underline">условия бронирования</a>. Даю согласие на обработку личных персональных данных
 
-          .form-row.form-row--modal-booking
-            .form-row__col
-              p.modal-booking__price
-                span.modal-booking__price--bigger.highlight 12 500
-                |
-                | рублей
-              p.modal-booking__time
-                |  с 18 апреля по 24 апреля
-            .form-row__col
+          .form-row.pure-g
+            .form-row__col.pure-u-1.pure-u-lg-1-2
+              .modal-booking__total
+                p.modal-booking__price
+                  b.modal-booking__price--bigger.highlight 12 500
+                  |
+                  | рублей
+                p.modal-booking__time
+                  |  с 18 апреля по 24 апреля
+            .form-row__col.pure-u-1.pure-u-lg-1-2
               button.button(
                 type="submit"
               ) забронировать номер

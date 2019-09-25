@@ -3716,6 +3716,11 @@ ini@^1.3.4, ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
+inputmask@^5.0.0-beta.258:
+  version "5.0.0-beta.258"
+  resolved "https://registry.yarnpkg.com/inputmask/-/inputmask-5.0.0-beta.258.tgz#3792574384d2d3d13b32d71f67ebf5aa10460fc5"
+  integrity sha512-iuhWinH+OU+Bp2Ak/VCpPvj2y4yoXMBhjO7WdpNelQiwfZiGFHHsmq85U1Ao+jkPj7IUYGQCWJpbkmW3vc7rKg==
+
 interpret@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
@@ -4931,6 +4936,11 @@ micromatch@^4.0.2:
   dependencies:
     braces "^3.0.1"
     picomatch "^2.0.5"
+
+micromodal@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/micromodal/-/micromodal-0.4.2.tgz#8ca34f3d5b2f6f43df173bcdc98af20256a4f07a"
+  integrity sha512-tL8Z6Vi72haNUNlkhLjJJv1Q16eqUWMPAGT4RF7mwDM5DNyJXC67Yj8jw/yVgGYdhnCEBBf3X5JM3d/MpXSEKg==
 
 mime-db@1.40.0, mime-db@^1.28.0:
   version "1.40.0"

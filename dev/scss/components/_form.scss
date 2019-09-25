@@ -6,6 +6,10 @@
   display: flex;
 }
 
+.form-row--align-end {
+  align-items: flex-end;
+}
+
 .form-row--hero {
   align-items: center;
   margin-bottom: 16px;
@@ -19,23 +23,14 @@
   }
 }
 
-.form-row--modal-booking {
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .form-control__wrapper {
-  position: relative;
+  // position: relative;
   width: 100%;
 
-  label.error {
-    font-size: 13px;
-    color: red;
-  }
-}
-
-.form--modal-booking .form-control__wrapper {
-  margin-bottom: 3.5rem;
+  // label.error {
+  //   font-size: 13px;
+  //   color: red;
+  // }
 }
 
 .form-label {
@@ -77,8 +72,234 @@
   line-height: 56px;
 }
 
+.form-input--date {
+  position: relative;
+  background-image: url(../img/icons/calendar.png);
+  background-repeat: no-repeat;
+  background-position: top 50% right 20px;
+  background-size: 20px 20px;
+}
+
 .form-textarea {
   height: 150px;
   padding: 18px 16px 18px 26px;
   line-height: 1.15;
+}
+
+.form-inc__wrap {
+  display: table;
+  width: 100%;
+}
+
+.form-inc__label {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.form-inc__label-text {
+  display: table;
+  margin-right: 12px;
+  line-height: 1em;
+}
+
+.form-inc__controls {
+  display: table;
+  width: 120px;
+}
+
+.form-inc__controls-left,
+.form-inc__controls-center,
+.form-inc__controls-right {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 1em;
+}
+
+.form-inc__controls-left {
+  text-align: left;
+}
+
+.form-inc__controls-center {
+  text-align: center;
+}
+
+.form-inc__controls-right {
+  text-align: right;
+}
+
+.form-inc__btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+  background-color: $brand;
+  box-shadow: none;
+  touch-action: manipulation;
+
+  &:focus {
+    outline: none;
+    opacity: 0.9;
+    transition: box-shadow 0.25s ease-out;
+  }
+}
+
+.form-inc__btn-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 16px;
+}
+
+
+.form-control__wrapper,
+.form__acceptance-wrapper,
+.form-inc__controls {
+  position: relative;
+
+  label.error {
+    position: absolute;
+    top: 102%;
+    left: 0;
+    font-size: 13px;
+    color: red;
+  }
+}
+
+
+.form-inc__controls label.error {
+  right: 0;
+  left: auto;
+  white-space: nowrap;
+}
+
+
+.form__acceptance-mask {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+}
+
+
+input:checked~label .form__acceptance-mask:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 12px;
+  height: 6px;
+  border: 1px solid transparent;
+  border-left-color: #000;
+  border-bottom-color: #000;
+}
+
+
+/* #form--modal-booking
+   ========================================================================== */
+
+.form--modal-booking {
+  color: #fff;
+}
+
+
+.form--modal-booking .form-row {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.form--modal-booking .form-control__wrapper,
+.form--modal-booking .form-inc__wrap {
+  margin-bottom: 2.5rem;
+
+  @media (min-width: 100em) {
+    margin-bottom: 3.5rem;
+  }
+}
+
+
+.form--modal-booking .form-label {
+  margin-bottom: 16px;
+  padding-left: 26px;
+  color: #fff;
+  text-align: left;
+}
+
+
+.form--modal-booking .form-row {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+
+.form--modal-booking .form-row__col {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+.form--modal-booking {
+
+  input,
+  textarea {
+    color: #fff;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #b9b8c1;
+  }
+}
+
+
+.form--modal-booking .form-inc__wrap {
+  color: #fff;
+  font-size: 1rem;
+}
+
+
+.form--modal-booking .form-inc__label {
+  padding-left: 26px;
+}
+
+
+.form--modal-booking .form__acceptance-wrapper {
+  margin-bottom: 4rem;
+
+  @media (min-width: 100em) {
+    margin-bottom: 6rem;
+  }
+}
+
+
+.form--modal-booking .form__acceptance-label {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 580px;
+}
+
+.form--modal-booking .form__acceptance-mask {
+  flex: none;
+  margin-right: 26px;
+  border-color: #fff;
+}
+
+
+.form--modal-booking input:checked~label .form__acceptance-mask:after {
+  border-left-color: #fff;
+  border-bottom-color: #fff;
 }

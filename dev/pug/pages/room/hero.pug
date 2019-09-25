@@ -27,29 +27,27 @@
           .hero-form__cost
             span.hero-form__cost-value 2300 .. 3900 ₽
             span.hero-form__cost-notes цена за сутки
-          .form-row
+          .form-row.form-row--hero
             label.hero-form__label(for="checkin")
               | Выезд
             .form-control__wrapper
-              input.form-input#checkin(
+              input.form-input.form-input--date.js-date#checkin(
                 type="text",
                 name="checkin",
-                placeholder="19 июня 2019",
+                placeholder="дд.мм.гг",
                 readonly
               )
-              label.icon.icon-calendar(for="checkin")
-          .form-row
+          .form-row.form-row--hero
             label.hero-form__label(for="checkout")
               | Заезд
             .form-control__wrapper
-              input.form-input#checkout(
+              input.form-input.form-input--date.js-date#checkout(
                 type="text",
                 name="checkout",
-                placeholder="19 июня 2019",
+                placeholder="дд.мм.гг",
                 readonly
               )
-              label.icon.icon-calendar(for="checkout")
-          .form-row
+          .form-row.form-row--hero
             button.button.button--arrow(
               type="submit"
             ) найти номер
